@@ -1,0 +1,73 @@
+import tkinter
+from tkinter import Button, Entry, Label, Toplevel, messagebox
+
+what = input("Please enter login: ")
+what2 = input("Please enter password: ")
+
+if what != "max1337":
+    print("You hacker, please prese enter to close this app")
+
+if what2 != "garrysmod":
+    print("You hacker, please prese enter to close this app")
+
+if what2 == "niger":
+    root = tkinter.Tk()
+
+    root.geometry("600x800")
+    root.title("Hello, niger")
+
+    def login_dev():
+        logindev = messagebox.askyesno(
+            title="Достпуп разрешен",
+            message="Выполнен успешный вход")
+        vop = tkinter.Label(text="Вход зарегистрирован")
+
+        def check_logs():
+            print("Выполнил вход " + what)
+            logs = Button(text="Просмотор действий в консоле")
+    
+        log_login = Button(text="Войти в систму как Максим", command=login_dev)
+        logs = Button(text="Просмотор действий в консоле", command=check_logs)
+
+        logs.pack()
+        log_login.pack()
+        vop.pack()
+
+    def unlogin():
+        root.destroy
+        messagebox.showerror(
+            title="Ошибка",
+            message="Отказано в доступе(007)")
+
+    def loginn_dev():
+        vopros = tkinter.Label(text="Даишишгайшиш?")
+        ulohin = tkinter.Button(text= "ФНАФ", command=unlogin)
+        login = tkinter.Button(text="Я дед инсайд", command=login_dev)
+        unloginn = tkinter.Button(text="Нет", command=unlogin)
+
+        vopros.pack()
+        ulohin.pack()
+        login.pack()
+        unloginn.pack()  
+
+    def user_log():
+        def login_gghos():
+            messagebox.showerror(
+                title="Ошибка",
+                message="Данная функиция не доступна")
+
+        login_ghost = Button(text="Войти как гость", command=login_gghos) 
+
+        login_ghost.pack()      
+
+    text = tkinter.Label(text="SVT - Все права запитоненны")
+    buttin = tkinter.Button(text="Я Максим", command=loginn_dev)
+    bitim = tkinter.Button(text="Я пользователь", command=user_log)
+
+    text.pack()
+    buttin.pack()
+    bitim.pack()
+    
+
+
+    root.mainloop()
